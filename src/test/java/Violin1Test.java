@@ -10,7 +10,7 @@ public class Violin1Test {
 
     @Before
     public void before(){
-        violin1 = new Violin1("Srdjan Cuca", RankType.CONCERTMASTER, "Violin", "First Violins","Marc Soubeyran", "2000");
+        violin1 = new Violin1("Srdjan Cuca", RankType.CONCERTMASTER, "Violin", "Strings","Marc Soubeyran", "2000");
     }
     @Test
     public void canGetInstrumentMaker(){
@@ -26,7 +26,7 @@ public class Violin1Test {
     }
     @Test
     public void canGetMusicianSection(){
-        assertEquals("First Violins", violin1.getSection());
+        assertEquals("Strings", violin1.getSection());
     }
     @Test
     public void canGetInstrumentPlayed(){

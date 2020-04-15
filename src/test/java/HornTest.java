@@ -10,7 +10,7 @@ public class HornTest {
 
     @Before
     public void before(){
-        horn2 = new Horn("Peter Amon", RankType.SUBPRINCIPAL, "Horn", "Horns", "Conn");
+        horn2 = new Horn("Peter Amon", RankType.SUBPRINCIPAL, "Horn", "Brass", "Conn");
     }
     @Test
     public void getName(){
@@ -22,7 +22,7 @@ public class HornTest {
     }
     @Test
     public void getSection(){
-        assertEquals("Horns", horn2.getSection());
+        assertEquals("Brass", horn2.getSection());
     }
     @Test
     public void getManufacturer(){

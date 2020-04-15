@@ -10,7 +10,7 @@ public class FluteTest {
 
     @Before
     public void before(){
-        flute1 = new Flute("James Galway", RankType.PRINCIPAL,"Flute", "Flutes", "Yamaha", "Gold");
+        flute1 = new Flute("James Galway", RankType.PRINCIPAL,"Flute", "Woodwind", "Yamaha", "Gold");
     }
     @Test
     public void getName(){
@@ -22,7 +22,7 @@ public class FluteTest {
     }
     @Test
     public void getSection(){
-        assertEquals("Flutes", flute1.getSection());
+        assertEquals("Woodwind", flute1.getSection());
     }
     @Test
     public void getManufacturer(){
