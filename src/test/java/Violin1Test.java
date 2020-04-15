@@ -1,5 +1,6 @@
 import org.junit.Before;
 import org.junit.Test;
+import players.RankType;
 import players.strings.Violin1;
 
 import static org.junit.Assert.assertEquals;
@@ -9,7 +10,7 @@ public class Violin1Test {
 
     @Before
     public void before(){
-        violin1 = new Violin1("Srdjan Cuca", "Violin", "First Violins","Marc Soubeyran", "2000");
+        violin1 = new Violin1("Srdjan Cuca", RankType.CONCERTMASTER, "Violin", "First Violins","Marc Soubeyran", "2000");
     }
     @Test
     public void canGetInstrumentMaker(){
@@ -34,6 +35,14 @@ public class Violin1Test {
     @Test
     public void soundMade(){
         assertEquals("I make a glorious sound.", violin1.sound());
+    }
+    @Test
+    public void canGetPosition(){
+        assertEquals(RankType.CONCERTMASTER, violin1.getRank());
+    }
+    @Test
+    public void canGetSalary(){
+        assertEquals(50000, violin1.getRank().getSalary());
     }
 
 }

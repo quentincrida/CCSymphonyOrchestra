@@ -2,13 +2,14 @@ package players.woodwinds;
 
 import behaviours.IPlay;
 import players.Musician;
+import players.RankType;
 
 public class Flute extends Musician implements IPlay {
     private String manufacturer;
     private String material;
 
-    public Flute(String name, String instrumentPlayed, String section, String manufacturer, String material) {
-        super(name, instrumentPlayed, section);
+    public Flute(String name, RankType position, String instrumentPlayed, String section, String manufacturer, String material) {
+        super(name, position, instrumentPlayed, section);
         this.manufacturer = manufacturer;
         this.material = material;
     }

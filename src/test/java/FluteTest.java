@@ -1,5 +1,6 @@
 import org.junit.Before;
 import org.junit.Test;
+import players.RankType;
 import players.woodwinds.Flute;
 
 import static org.junit.Assert.assertEquals;
@@ -9,7 +10,7 @@ public class FluteTest {
 
     @Before
     public void before(){
-        flute1 = new Flute("James Galway", "Flute", "Flutes", "Yamaha", "Gold");
+        flute1 = new Flute("James Galway", RankType.PRINCIPAL,"Flute", "Flutes", "Yamaha", "Gold");
     }
     @Test
     public void getName(){
@@ -34,5 +35,13 @@ public class FluteTest {
     @Test
     public void soundMade(){
         assertEquals("Dulcet tones.", flute1.sound());
+    }
+    @Test
+    public void canGetPosition(){
+        assertEquals(RankType.PRINCIPAL, flute1.getRank());
+    }
+    @Test
+    public void canGetSalary(){
+        assertEquals(45000, flute1.getSalaryFromEnum());
     }
 }
