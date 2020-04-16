@@ -3,10 +3,10 @@ package management;
 import behaviours.IWork;
 import players.RankType;
 
-public class CEO extends OfficeStaff implements IWork {
+public class OrchestraManager extends OfficeStaff implements IWork {
     private String phoneExtension;
 
-    public CEO(String name, String jobTitle, String phoneExtension, RankType position) {
+    public OrchestraManager(String name, String jobTitle, RankType position, String phoneExtension) {
         super(name, jobTitle, position);
         this.phoneExtension = phoneExtension;
     }
@@ -14,9 +14,7 @@ public class CEO extends OfficeStaff implements IWork {
     public String getPhoneExtension() {
         return phoneExtension;
     }
-
-    public String contract() {
+    public String contract(){
         return "Permanent";
     }
-
 }

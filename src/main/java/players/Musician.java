@@ -7,7 +7,7 @@ public abstract class Musician {
     private String section;
     private RankType position;
 
-    public Musician( String name, RankType position,  String instrumentPlayed,String section) {
+    public Musician(String name, RankType position, String instrumentPlayed, String section) {
         this.name = name;
         this.position = position;
         this.instrumentPlayed = instrumentPlayed;

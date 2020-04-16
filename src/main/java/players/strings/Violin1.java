@@ -4,8 +4,6 @@ import behaviours.IPlay;
 import players.Musician;
 import players.RankType;
 
-import java.util.Date;
-
 public class Violin1 extends Musician implements IPlay {
     private String instrumentMaker;
     private String date;
