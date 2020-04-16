@@ -1,7 +1,10 @@
 package players;
 
 
-public abstract class Musician {
+import behaviours.IPlay;
+import behaviours.IWork;
+
+public abstract class Musician implements IPlay, IWork {
     private String name;
     private String instrumentPlayed;
     private String section;
@@ -17,6 +20,7 @@ public abstract class Musician {
     public String getName() {
         return name;
     }
+
     public String getInstrumentPlayed(){
         return instrumentPlayed;
     }
@@ -24,12 +28,22 @@ public abstract class Musician {
     public String getSection() {
         return section;
     }
+
     public RankType getRank(){
         return this.position;
     }
+
     public int getSalaryFromEnum(){
         return this.position.getSalary();
     }
+
+    public String sound(){
+        return "I make this sound";
+    }
+    public String contract(){
+        return "Permanent/Paid per session";
+    }
+
 
 
 }

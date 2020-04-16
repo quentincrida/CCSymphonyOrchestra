@@ -21,7 +21,7 @@ public class Orchestra {
         return name;
     }
 
-    public int musicianCount(){
+    public int musicianCount() {
         return this.instrumentalists.size();
     }
 
@@ -34,23 +34,24 @@ public class Orchestra {
     }
 
 
-    public int employeeCount(){
+    public int employeeCount() {
         return this.employees.size();
     }
 
     public void addEmployee(IWork employee) {
         this.employees.add(employee);
     }
+
     public void removeEmployee(IWork employee) {
         this.employees.remove(employee);
     }
-    }
 
-//    public int averageSalary() {
+
+//    public double averageSalary() {
 //        double totalSalaries = 0;
 //        double averageSalary = 0;
-//        for (IWork employee : employees){
+//        for (IWork employee : employees) {
 //            totalSalaries += employee.
 //        }
 //    }
-
+}
