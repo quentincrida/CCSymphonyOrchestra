@@ -38,6 +38,10 @@ public class TimpaniTest {
     public void soundMade() {
         assertEquals("Boom, boom.", timpani.sound());
     }
+    @Test
+    public void getContractType(){
+        assertEquals("Paid per session", timpani.contract());
+    }
 
     @Test
     public void canGetPosition() {

@@ -1,10 +1,11 @@
 package players.woodwinds;
 
 import behaviours.IPlay;
+import behaviours.IWork;
 import players.Musician;
 import players.RankType;
 
-public class Flute extends Musician implements IPlay {
+public class Flute extends Musician implements IPlay, IWork {
     private String manufacturer;
     private String material;
 
@@ -21,7 +22,10 @@ public class Flute extends Musician implements IPlay {
     public String getMaterial() {
         return material;
     }
+
     public String sound(){
         return "Dulcet tones.";
     }
+
+    public String contract() {return "Paid per session";}
 }

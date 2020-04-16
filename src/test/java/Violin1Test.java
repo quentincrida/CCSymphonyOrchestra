@@ -37,6 +37,10 @@ public class Violin1Test {
         assertEquals("I make a glorious sound.", violin1.sound());
     }
     @Test
+    public void contractType(){
+        assertEquals("Pay per session", violin1.contract());
+    }
+    @Test
     public void canGetPosition(){
         assertEquals(RankType.CONCERTMASTER, violin1.getRank());
     }

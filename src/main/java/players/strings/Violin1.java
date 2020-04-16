@@ -1,10 +1,11 @@
 package players.strings;
 
 import behaviours.IPlay;
+import behaviours.IWork;
 import players.Musician;
 import players.RankType;
 
-public class Violin1 extends Musician implements IPlay {
+public class Violin1 extends Musician implements IPlay, IWork {
     private String instrumentMaker;
     private String date;
 
@@ -24,6 +25,10 @@ public class Violin1 extends Musician implements IPlay {
 
     public String sound(){
         return "I make a glorious sound.";
+    }
+
+    public String contract(){
+        return "Pay per session";
     }
 
 }

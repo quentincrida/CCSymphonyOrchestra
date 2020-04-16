@@ -33,6 +33,10 @@ public class HornTest {
         assertEquals("Soaring melodies", horn2.sound());
     }
     @Test
+    public void getContractType(){
+        assertEquals("Pay per session", horn2.contract());
+    }
+    @Test
     public void canGetPosition(){
         assertEquals(RankType.SUBPRINCIPAL, horn2.getRank());
     }

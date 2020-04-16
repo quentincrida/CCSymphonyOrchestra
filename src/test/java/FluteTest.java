@@ -37,6 +37,8 @@ public class FluteTest {
         assertEquals("Dulcet tones.", flute1.sound());
     }
     @Test
+    public void contractType(){ assertEquals("Paid per session", flute1.contract());}
+    @Test
     public void canGetPosition(){
         assertEquals(RankType.PRINCIPAL, flute1.getRank());
     }
