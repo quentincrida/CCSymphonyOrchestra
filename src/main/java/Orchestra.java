@@ -1,5 +1,6 @@
 import behaviours.IPlay;
 import behaviours.IWork;
+import players.RankType;
 import players.strings.Violin1;
 import players.woodwinds.Flute;
 
@@ -43,4 +44,13 @@ public class Orchestra {
     public void removeEmployee(IWork employee) {
         this.employees.remove(employee);
     }
-}
+    }
+
+//    public int averageSalary() {
+//        double totalSalaries = 0;
+//        double averageSalary = 0;
+//        for (IWork employee : employees){
+//            totalSalaries += employee.
+//        }
+//    }
+

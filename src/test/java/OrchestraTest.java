@@ -64,13 +64,20 @@ public class OrchestraTest {
     @Test
     public void canAddEmployeeToOrch(){
         orchestra.addEmployee(ceo);
-        assertEquals(1, orchestra.employeeCount());
+        orchestra.addEmployee(violin1);
+        assertEquals(2, orchestra.employeeCount());
     }
     @Test
     public void canRemoveEmployeeFromOrch(){
         orchestra.addEmployee(ceo);
         orchestra.addEmployee(orchestraManager);
+        orchestra.addEmployee(timpani);
         orchestra.removeEmployee(ceo);
-        assertEquals(1, orchestra.employeeCount());
+        assertEquals(2, orchestra.employeeCount());
     }
+
+//    @Test
+//    public void canCalculateAverageSalary(){
+//        assertEquals(45000, orchestra.averageSalary());
+//    }
 }
