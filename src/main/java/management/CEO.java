@@ -3,6 +3,8 @@ package management;
 import behaviours.IWork;
 import players.RankType;
 
+import java.util.Date;
+
 public class CEO extends OfficeStaff implements IWork {
     private String phoneExtension;
 
@@ -18,5 +20,7 @@ public class CEO extends OfficeStaff implements IWork {
     public String contract() {
         return "Permanent";
     }
+
+
 //
 }

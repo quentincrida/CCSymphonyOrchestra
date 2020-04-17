@@ -3,14 +3,17 @@ import org.junit.Test;
 import players.RankType;
 import players.percussion.Timpani;
 
+import java.util.Date;
+
 import static org.junit.Assert.assertEquals;
 
 public class TimpaniTest {
     Timpani timpani;
+    Date startDate;
 
     @Before
     public void before() {
-        timpani = new Timpani("Chris Mueller", RankType.TUTTI, "Timpani", "Percussion", "Bronze");
+        timpani = new Timpani("Chris Mueller", RankType.TUTTI, "Timpani", "Percussion", startDate, "Bronze");
     }
 
 
@@ -51,6 +54,11 @@ public class TimpaniTest {
     @Test
     public void canGetSalary() {
         assertEquals(30000, timpani.getSalaryFromEnum());
+    }
+
+    @Test
+    public void canGetStartDate(){
+        assertEquals(startDate, timpani.getStartDate());
     }
 
 }

@@ -16,7 +16,7 @@ public class Violin1Test {
     public void before(){
         startDate = new Date(2000, Calendar.JANUARY,01);
         violin1 = new Violin1("Srdjan Cuca", RankType.CONCERTMASTER,
-                "Violin", "Strings","Marc Soubeyran", "2000", startDate);
+                "Violin", "Strings",startDate, "Marc Soubeyran", "2000");
 
     }
     @Test

@@ -5,12 +5,14 @@ import behaviours.IWork;
 import players.Musician;
 import players.RankType;
 
+import java.util.Date;
+
 public class Flute extends Musician implements IPlay, IWork {
     private String manufacturer;
     private String material;
 
-    public Flute(String name, RankType position, String instrumentPlayed, String section, String manufacturer, String material) {
-        super(name, position, instrumentPlayed, section);
+    public Flute(String name, RankType position, String instrumentPlayed, String section, Date startDate, String manufacturer, String material) {
+        super(name, position, instrumentPlayed, section, startDate);
         this.manufacturer = manufacturer;
         this.material = material;
     }
@@ -28,4 +30,8 @@ public class Flute extends Musician implements IPlay, IWork {
     }
 
     public String contract() {return "Paid per session";}
+
+
+
+
 }

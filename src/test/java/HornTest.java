@@ -3,14 +3,19 @@ import org.junit.Test;
 import players.RankType;
 import players.brass.Horn;
 
+import java.util.Calendar;
+import java.util.Date;
+
 import static org.junit.Assert.assertEquals;
 
 public class HornTest {
     Horn horn2;
+    Date startDate;
 
     @Before
     public void before(){
-        horn2 = new Horn("Peter Amon", RankType.SUBPRINCIPAL, "Horn", "Brass", "Conn");
+        startDate = new Date(2017, Calendar.JUNE, 12);
+        horn2 = new Horn("Peter Amon", RankType.SUBPRINCIPAL, "Horn", "Brass", startDate,"Conn");
     }
     @Test
     public void getName(){
@@ -43,6 +48,11 @@ public class HornTest {
     @Test
     public void canGetSalary(){
         assertEquals(40000, horn2.getSalaryFromEnum());
+    }
+
+    @Test
+    public void canGetStartDate(){
+        assertEquals(startDate, horn2.getStartDate());
     }
 
 }

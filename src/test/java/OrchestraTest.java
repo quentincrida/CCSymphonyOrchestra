@@ -11,6 +11,7 @@ import players.strings.Violin1;
 import players.woodwinds.Flute;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 
 import static org.junit.Assert.assertEquals;
@@ -32,10 +33,10 @@ public class OrchestraTest {
         orchestra = new Orchestra("CodeClan Symphony Orchestra");
         instrumentalists = new ArrayList<>();
         employees = new ArrayList<>();
-        violin1 = new Violin1("Bob Hope", RankType.CONCERTMASTER, "Violin", "Strings", "Colin Adamson", "1999", startDate);
-        flute = new Flute("Casey Froome", RankType.SUBPRINCIPAL, "Flute", "Woodwinds", "Yamaha", "Silver");
-        timpani = new Timpani("Bob Hope", RankType.PRINCIPAL, "Timpani", "Percussion", "Copper");
-        horn2 = new Horn("Peter Amon", RankType.SUBPRINCIPAL, "Horn", "Brass", "Conn");
+        violin1 = new Violin1("Bob Hope", RankType.CONCERTMASTER, "Violin", "Strings", startDate,"Colin Adamson", "1999");
+        flute = new Flute("Casey Froome", RankType.SUBPRINCIPAL, "Flute", "Woodwinds", startDate, "Yamaha", "Silver");
+        timpani = new Timpani("Bob Hope", RankType.PRINCIPAL, "Timpani", "Percussion", startDate,"Copper");
+        horn2 = new Horn("Peter Amon", RankType.SUBPRINCIPAL, "Horn", "Brass", startDate,"Conn");
         ceo = new CEO("Louis Heynemann", "Chief Executive Officer", "012", RankType.TIER3);
         orchestraManager = new OrchestraManager("Ian Smith", "OM", RankType.TIER1, "210");
     }

@@ -5,11 +5,13 @@ import behaviours.IWork;
 import players.Musician;
 import players.RankType;
 
+import java.util.Date;
+
 public class Timpani extends Musician implements IPlay, IWork {
     private String material;
 
-    public Timpani(String name, RankType position, String instrumentPlayed, String section, String material) {
-        super(name, position, instrumentPlayed, section);
+    public Timpani(String name, RankType position, String instrumentPlayed, String section, Date startDate, String material) {
+        super(name, position, instrumentPlayed, section, startDate);
         this.material = material;
     }
 
@@ -24,4 +26,6 @@ public class Timpani extends Musician implements IPlay, IWork {
     public String contract(){
         return "Paid per session";
     }
+
+
 }

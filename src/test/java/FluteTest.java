@@ -3,14 +3,19 @@ import org.junit.Test;
 import players.RankType;
 import players.woodwinds.Flute;
 
+import java.util.Calendar;
+import java.util.Date;
+
 import static org.junit.Assert.assertEquals;
 
 public class FluteTest {
     Flute flute1;
+    Date startDate;
 
     @Before
     public void before(){
-        flute1 = new Flute("James Galway", RankType.PRINCIPAL,"Flute", "Woodwind", "Yamaha", "Gold");
+        startDate = new Date(2010, Calendar.JULY, 25);
+        flute1 = new Flute("James Galway", RankType.PRINCIPAL,"Flute", "Woodwind", startDate, "Yamaha", "Gold");
     }
     @Test
     public void getName(){
@@ -45,5 +50,9 @@ public class FluteTest {
     @Test
     public void canGetSalary(){
         assertEquals(45000, flute1.getSalaryFromEnum());
+    }
+    @Test
+    public void canGetStartDate(){
+        assertEquals(startDate, flute1.getStartDate());
     }
 }

@@ -3,6 +3,8 @@ package management;
 import behaviours.IWork;
 import players.RankType;
 
+import java.util.Date;
+
 public class OrchestraManager extends OfficeStaff implements IWork {
     private String phoneExtension;
 
@@ -17,5 +19,6 @@ public class OrchestraManager extends OfficeStaff implements IWork {
     public String contract(){
         return "Permanent";
     }
+
 //
 }
