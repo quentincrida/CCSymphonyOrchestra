@@ -48,6 +48,8 @@ public abstract class Musician implements IPlay, IWork {
         return this.getSalaryFromEnum();
     }
 
+
+
     //    public String sound(){
 //        return "";
 //    }

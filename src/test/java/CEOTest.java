@@ -3,14 +3,19 @@ import org.junit.Before;
 import org.junit.Test;
 import players.RankType;
 
+import java.util.Calendar;
+import java.util.Date;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertSame;
 
 public class CEOTest {
     CEO ceo;
+    Date startDate;
     @Before
     public void before(){
-        ceo = new CEO("Louis Heynemann", "Chief Executive Officer", "012", RankType.TIER3);
+        startDate = new Date(2012, Calendar.JULY, 27);
+        ceo = new CEO("Louis Heynemann", "Chief Executive Officer", "012", RankType.TIER3, startDate);
     }
     @Test
     public void hasName(){
@@ -35,6 +40,10 @@ public class CEOTest {
     @Test
     public void canGetSalary(){
         assertEquals(65000, ceo.getRank().getSalary());
+    }
+    @Test
+    public void canGetStartDate(){
+        assertEquals(startDate, ceo.getStartDate());
     }
     }
 

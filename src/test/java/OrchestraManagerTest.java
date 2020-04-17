@@ -3,14 +3,19 @@ import org.junit.Before;
 import org.junit.Test;
 import players.RankType;
 
+import java.util.Calendar;
+import java.util.Date;
+
 import static org.junit.Assert.assertEquals;
 
 public class OrchestraManagerTest {
     OrchestraManager orchestraManager;
+    Date startDate;
 
     @Before
     public void before(){
-        orchestraManager = new OrchestraManager("Ian Smith", "OM", RankType.TIER1, "210");
+        startDate = new Date(2007, Calendar.SEPTEMBER, 1);
+        orchestraManager = new OrchestraManager("Ian Smith", "OM", RankType.TIER1, "210", startDate);
     }
     @Test
     public void hasName(){
@@ -35,5 +40,9 @@ public class OrchestraManagerTest {
     @Test
     public void canGetSalary(){
         assertEquals(45000, orchestraManager.getRank().getSalary());
+    }
+    @Test
+    public void canGetStartDate(){
+        assertEquals(startDate, orchestraManager.getStartDate());
     }
 }

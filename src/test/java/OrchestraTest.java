@@ -37,8 +37,8 @@ public class OrchestraTest {
         flute = new Flute("Casey Froome", RankType.SUBPRINCIPAL, "Flute", "Woodwinds", startDate, "Yamaha", "Silver");
         timpani = new Timpani("Bob Hope", RankType.PRINCIPAL, "Timpani", "Percussion", startDate,"Copper");
         horn2 = new Horn("Peter Amon", RankType.SUBPRINCIPAL, "Horn", "Brass", startDate,"Conn");
-        ceo = new CEO("Louis Heynemann", "Chief Executive Officer", "012", RankType.TIER3);
-        orchestraManager = new OrchestraManager("Ian Smith", "OM", RankType.TIER1, "210");
+        ceo = new CEO("Louis Heynemann", "Chief Executive Officer", "012", RankType.TIER3, startDate);
+        orchestraManager = new OrchestraManager("Ian Smith", "OM", RankType.TIER1, "210", startDate);
     }
     @Test
     public void orchestraHasName(){

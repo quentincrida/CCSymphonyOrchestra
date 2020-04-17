@@ -16,7 +16,6 @@ public class Violin1 extends Musician implements IPlay, IWork {
         super(name, position, instrumentPlayed,section, startDate);
         this.instrumentMaker = instrumentMaker;
         this.date = date;
-//        this.startDate = startDate;
     }
 
     public String getInstrumentMaker() {
@@ -27,10 +26,6 @@ public class Violin1 extends Musician implements IPlay, IWork {
         return date;
     }
 
-//    public Date getStartDate(){
-//        return startDate;
-//    }
-
     @Override
     public String sound(){
         return "I make a glorious sound."; }
@@ -39,8 +34,6 @@ public class Violin1 extends Musician implements IPlay, IWork {
     public String contract(){
         return "Pay per session";
     }
-
-
 
 
 }
