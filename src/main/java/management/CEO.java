@@ -18,5 +18,5 @@ public class CEO extends OfficeStaff implements IWork {
     public String contract() {
         return "Permanent";
     }
-
+//
 }

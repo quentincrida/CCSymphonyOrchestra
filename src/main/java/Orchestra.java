@@ -46,7 +46,13 @@ public class Orchestra {
         this.employees.remove(employee);
     }
 
-
+    public int totalSalaries(){
+        int totalSalaries = 0;
+        for(IWork employee : employees){
+            totalSalaries += employee.getSalary();
+        }
+        return totalSalaries;
+    }
 //    public double averageSalary() {
 //        double totalSalaries = 0;
 //        double averageSalary = 0;

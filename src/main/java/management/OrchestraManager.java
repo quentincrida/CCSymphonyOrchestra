@@ -17,4 +17,5 @@ public class OrchestraManager extends OfficeStaff implements IWork {
     public String contract(){
         return "Permanent";
     }
+//
 }

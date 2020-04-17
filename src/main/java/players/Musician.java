@@ -37,11 +37,14 @@ public abstract class Musician implements IPlay, IWork {
         return this.position.getSalary();
     }
 
-    public String sound(){
-        return "I make this sound";
-    }
-    public String contract(){
-        return "Permanent/Paid per session";
+//    public String sound(){
+//        return "";
+//    }
+//    public String contract(){
+//        return "";
+//    }
+    public int getSalary(){
+        return this.getSalaryFromEnum();
     }
 
 

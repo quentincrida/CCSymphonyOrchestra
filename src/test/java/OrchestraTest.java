@@ -5,6 +5,7 @@ import management.OrchestraManager;
 import org.junit.Before;
 import org.junit.Test;
 import players.RankType;
+import players.brass.Horn;
 import players.percussion.Timpani;
 import players.strings.Violin1;
 import players.woodwinds.Flute;
@@ -21,6 +22,7 @@ public class OrchestraTest {
     Flute flute;
     Timpani timpani;
     CEO ceo;
+    Horn horn2;
     OrchestraManager orchestraManager;
 
     @Before
@@ -31,6 +33,7 @@ public class OrchestraTest {
         violin1 = new Violin1("Bob Hope", RankType.CONCERTMASTER, "Violin", "Strings", "Colin Adamson", "1999");
         flute = new Flute("Casey Froome", RankType.SUBPRINCIPAL, "Flute", "Woodwinds", "Yamaha", "Silver");
         timpani = new Timpani("Bob Hope", RankType.PRINCIPAL, "Timpani", "Percussion", "Copper");
+        horn2 = new Horn("Peter Amon", RankType.SUBPRINCIPAL, "Horn", "Brass", "Conn");
         ceo = new CEO("Louis Heynemann", "Chief Executive Officer", "012", RankType.TIER3);
         orchestraManager = new OrchestraManager("Ian Smith", "OM", RankType.TIER1, "210");
     }
@@ -76,6 +79,16 @@ public class OrchestraTest {
         assertEquals(2, orchestra.employeeCount());
     }
 
+    @Test
+    public void canCalculateTotalSalaries(){
+        orchestra.addEmployee(timpani);
+        orchestra.addEmployee(violin1);
+        orchestra.addEmployee(ceo);
+        orchestra.addEmployee(horn2);
+        orchestra.addEmployee(flute);
+
+        assertEquals(240000, orchestra.totalSalaries());
+    }
 //    @Test
 //    public void canCalculateAverageSalary(){
 //        assertEquals(45000, orchestra.averageSalary());

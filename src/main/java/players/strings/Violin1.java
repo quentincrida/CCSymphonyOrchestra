@@ -23,10 +23,11 @@ public class Violin1 extends Musician implements IPlay, IWork {
         return date;
     }
 
+    @Override
     public String sound(){
-        return "I make a glorious sound.";
-    }
+        return "I make a glorious sound."; }
 
+    @Override
     public String contract(){
         return "Pay per session";
     }
