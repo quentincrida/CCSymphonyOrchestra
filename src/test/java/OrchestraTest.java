@@ -89,8 +89,13 @@ public class OrchestraTest {
 
         assertEquals(240000, orchestra.totalSalaries());
     }
-//    @Test
-//    public void canCalculateAverageSalary(){
-//        assertEquals(45000, orchestra.averageSalary());
-//    }
+    @Test
+    public void canCalculateAverageSalary(){
+        orchestra.addEmployee(timpani);
+        orchestra.addEmployee(violin1);
+        orchestra.addEmployee(ceo);
+        orchestra.addEmployee(horn2);
+        orchestra.addEmployee(flute);
+        assertEquals(48000.00, orchestra.averageSalary(), 0.01);
+    }
 }
