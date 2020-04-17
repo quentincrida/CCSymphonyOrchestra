@@ -1,5 +1,5 @@
 package behaviours;
 
 public interface IPlay {
-    public String sound();
+    String sound();
 }

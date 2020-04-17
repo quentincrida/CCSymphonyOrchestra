@@ -5,14 +5,19 @@ import behaviours.IWork;
 import players.Musician;
 import players.RankType;
 
+import java.util.Date;
+
 public class Violin1 extends Musician implements IPlay, IWork {
     private String instrumentMaker;
     private String date;
+    private Date startDate;
 
-    public Violin1(String name, RankType position, String instrumentPlayed, String section, String instrumentMaker, String date) {
+    public Violin1(String name, RankType position, String instrumentPlayed,
+                        String section, String instrumentMaker, String date, Date startDate) {
         super(name, position, instrumentPlayed,section);
         this.instrumentMaker = instrumentMaker;
         this.date = date;
+        this.startDate = startDate;
     }
 
     public String getInstrumentMaker() {
@@ -23,6 +28,10 @@ public class Violin1 extends Musician implements IPlay, IWork {
         return date;
     }
 
+    public Date getStartDate(){
+        return startDate;
+    }
+
     @Override
     public String sound(){
         return "I make a glorious sound."; }
@@ -31,5 +40,7 @@ public class Violin1 extends Musician implements IPlay, IWork {
     public String contract(){
         return "Pay per session";
     }
+
+
 
 }

@@ -1,6 +1,6 @@
 package behaviours;
 
 public interface IWork {
-    public String contract();
-    public int getSalary();
+    String contract();
+    int getSalary();
 }

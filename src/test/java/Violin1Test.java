@@ -3,14 +3,21 @@ import org.junit.Test;
 import players.RankType;
 import players.strings.Violin1;
 
+import java.util.Calendar;
+import java.util.Date;
+
 import static org.junit.Assert.assertEquals;
 
 public class Violin1Test {
     Violin1 violin1;
+    Date startDate;
 
     @Before
     public void before(){
-        violin1 = new Violin1("Srdjan Cuca", RankType.CONCERTMASTER, "Violin", "Strings","Marc Soubeyran", "2000");
+        startDate = new Date(2000, Calendar.JANUARY,01);
+        violin1 = new Violin1("Srdjan Cuca", RankType.CONCERTMASTER,
+                "Violin", "Strings","Marc Soubeyran", "2000", startDate);
+
     }
     @Test
     public void canGetInstrumentMaker(){
@@ -19,6 +26,10 @@ public class Violin1Test {
     @Test
     public void canGetInstrumentDate(){
         assertEquals("2000", violin1.getDate());
+    }
+    @Test
+    public void canGetStartingDate(){
+        assertEquals(startDate, violin1.getStartDate());
     }
     @Test
     public void canGetMusicianName(){
