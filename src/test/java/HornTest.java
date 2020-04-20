@@ -47,7 +47,7 @@ public class HornTest {
     }
     @Test
     public void canGetSalary(){
-        assertEquals(40000, horn2.getSalaryFromEnum());
+        assertEquals(40000, horn2.getSalary());
     }
 
     @Test

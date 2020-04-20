@@ -11,7 +11,6 @@ import players.strings.Violin1;
 import players.woodwinds.Flute;
 
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Date;
 
 import static org.junit.Assert.assertEquals;

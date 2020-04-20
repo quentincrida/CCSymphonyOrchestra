@@ -38,12 +38,8 @@ public abstract class OfficeStaff implements IWork {
         return startDate;
     }
 
-    public int getSalaryFromEnum(){
-        return this.position.getSalary();
-    }
-
     public int getSalary(){
-        return this.getSalaryFromEnum();
+        return this.position.getSalary();
     }
 
 }

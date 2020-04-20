@@ -36,10 +36,12 @@ public class OrchestraManagerTest {
     @Test
     public void canGetPosition(){
         assertEquals(RankType.TIER1, orchestraManager.getRank());
+        System.out.println(orchestraManager.getRank());
     }
     @Test
     public void canGetSalary(){
         assertEquals(45000, orchestraManager.getRank().getSalary());
+        System.out.println(orchestraManager.getSalary());
     }
     @Test
     public void canGetStartDate(){

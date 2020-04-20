@@ -49,7 +49,7 @@ public class FluteTest {
     }
     @Test
     public void canGetSalary(){
-        assertEquals(45000, flute1.getSalaryFromEnum());
+        assertEquals(45000, flute1.getSalary());
     }
     @Test
     public void canGetStartDate(){

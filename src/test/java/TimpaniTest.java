@@ -53,7 +53,7 @@ public class TimpaniTest {
 
     @Test
     public void canGetSalary() {
-        assertEquals(30000, timpani.getSalaryFromEnum());
+        assertEquals(30000, timpani.getSalary());
     }
 
     @Test

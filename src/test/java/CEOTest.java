@@ -39,7 +39,7 @@ public class CEOTest {
     }
     @Test
     public void canGetSalary(){
-        assertEquals(65000, ceo.getRank().getSalary());
+        assertEquals(65000, ceo.getSalary());
     }
     @Test
     public void canGetStartDate(){
